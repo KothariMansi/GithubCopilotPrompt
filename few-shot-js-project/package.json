@@ -1,0 +1,14 @@
+{
+  "name": "few-shot-js-project",
+  "version": "1.0.0",
+  "description": "A project implementing few-shot prompting logic in JavaScript.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

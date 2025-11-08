@@ -1,0 +1,28 @@
+def to_snake_case(s: str) -> str:
+    """Convert text to snake_case."""
+    import re
+    s = s.strip()
+    # Split camelCase / PascalCase boundaries
+    s = re.sub(r'(.)([A-Z][a-z]+)', r'\1_\2', s)
+    s = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s)
+    # Replace any non-alphanumeric characters with underscore
+    s = re.sub(r'[^0-9A-Za-z]+', '_', s)
+    # Collapse multiple underscores, strip edges, and lowercase
+    s = re.sub(r'_+', '_', s).strip('_').lower()
+    return s
+
+Purpose:
+Provide a concise instruction to a language model to perform a task without examples.
+
+Template:
+You are an expert <role>. Perform the following task:
+- Task: <describe the task clearly and precisely>
+- Input: <provide the input>
+- Constraints: <list any constraints, e.g., length, format, forbidden content>
+- Tone: <e.g., formal, concise, friendly>
+
+Output:
+Return only the requested result in the specified format. Do not include explanations, examples, or additional commentary.
+
+Usage:
+Replace placeholders (<...>) with concrete values and supply the Input when invoking the prompt.
